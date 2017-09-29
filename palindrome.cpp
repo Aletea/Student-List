@@ -17,6 +17,10 @@ int main() {
   for(int i = 0; i < 80; i++) {
     //if it's a letter, then add it to nextSentance
     if (isalpha(sentance[i])) {
+      int number = sentance[i];
+      if (number > 64 && number < 91) {
+	sentance[i] = sentance[i] + 32;
+      }
 	nextSentance[count] = sentance[i];
 	//go to next index
 	count++;
@@ -27,6 +31,7 @@ int main() {
       break;
     }
   }
+  cout << nextSentance << endl;
   //secondCount keeps track of copySentance current index
   int secondCount = 0;
   //using the length of nextSentance
