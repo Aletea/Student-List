@@ -71,6 +71,7 @@ struct Students {
 	//locate the student idea of the student that studentDelete is pointing to from studentList
 	//check if it matched the input ID
 	if ((*studentDelete)->ID == studentID) {
+	  delete *studentDelete;
 	  //if so, erase the student in studentList that studentDelete is pointing to
 	  studentDelete = studentList.erase(studentDelete);
 	  found = true;
